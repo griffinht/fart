@@ -82,12 +82,12 @@ export default function FartControls() {
         className="rounded-full bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 text-lg font-bold"
         onClick={playCurrentFart}
       >
-        Play Current Fart 💨
+        Fart
       </button>
 
       {/* Upload section */}
       <div className="flex flex-col items-center gap-4 p-6 border-2 border-dashed border-gray-300 rounded-lg">
-        <p className="text-sm text-gray-600">Upload new fart sound (MP3 only)</p>
+        <p className="text-sm text-gray-600">Fart.mp3</p>
         <input 
           type="file" 
           accept="audio/mp3"
@@ -104,13 +104,9 @@ export default function FartControls() {
           onClick={handleUpload}
           disabled={!audioFile || isLoading}
         >
-          {isLoading ? 'Uploading...' : 'Upload New Fart'}
+          {isLoading ? 'Uploading...' : 'Upload Fart.mp3'}
         </button>
       </div>
-
-      <p className="text-sm text-gray-500 mt-4">
-        {audioFile ? `Selected: ${audioFile.name}` : 'Current fart sound will be replaced for everyone!'}
-      </p>
     </>
   );
 } 
